@@ -1,0 +1,19 @@
+Used a timer to add score every second
+
+extends CanvasLayer
+@onready var score_int_label: Label = $ScoreIntLabel
+var score = 0
+func _ready() -> void:
+	pass
+	
+func _process(delta: float) -> void:
+	pass
+	
+
+
+
+func _on_score_timeout() -> void:
+	score += 5
+	score_int_label.text = "Score: %d" % score
+
+	pass # Replace with function body.
