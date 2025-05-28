@@ -1,0 +1,21 @@
+
+In parallax2d
+extends Node2D
+
+
+
+func _on_restart_button_pressed() -> void:
+	get_tree().reload_current_scene()
+	pass # Replace with function body
+
+
+In button canvaslayer
+	
+func _ready() -> void:
+	get_tree().paused = false
+	self.hide()
+	
+
+func restart():
+	get_tree().paused = true
+	self.show()
