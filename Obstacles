@@ -1,0 +1,15 @@
+Spikes
+extends StaticBody2D
+
+
+func _on_check_collision_spike_body_entered(body: Node2D) -> void:
+	if body.has_method("Spike_collided"):
+		body.Spike_collided()
+	pass # Replace with function body.
+
+
+Bird
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.has_method("Bird_collided"):
+		body.Bird_collided()
+		pass 
